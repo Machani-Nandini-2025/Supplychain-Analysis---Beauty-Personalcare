@@ -1,1 +1,1 @@
-# SupplychainAnalysis-Beauty-Personalcare
+# SupplychainAnalysis-Beauty&Personalcare
