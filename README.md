@@ -120,3 +120,7 @@ SELECT
 FROM Supply_Chain
 GROUP BY Supplier_Name;
 ```
+
+### Results/Findings
+
+
