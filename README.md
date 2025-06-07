@@ -4,7 +4,7 @@
 
 - [Project Overview](#project-overview)
 - [Data sources](#data-sources)
-- [Recommendations](recommendation)
+- [Recomendations](#recomendations)
 ### Project Overview
 
 This project analyzes supply chain performance in the Beauty & Personal Care industry using real-world operational data. The project focused on optimizing supplier performance, reducing lead times, and improving inventory visibility.
