@@ -123,4 +123,15 @@ GROUP BY Supplier_Name;
 
 ### Results/Findings
 
+- High overall profit margin with strong revenue generation.
+- Cosmetics have the highest defect rates among all product types.
+- Air transport is costly and has the highest defect rate, suggesting inefficiencies.
+
+### Recomendations
+
+Based on the analysis we recommend the following action:
+- Reduce reliance on air transport to lower cost and defect rates.
+- Implement stricter quality control for cosmetics and haircare product.
+- Optimize inventory by reducing overstocked low performing SKUs and boosting high demand items.
+
 
