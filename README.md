@@ -33,12 +33,6 @@ In the intial data preparation phase, i performed the following tasks:
 - Supplier Performance – Tracked delivery delays and fulfillment rates
 - Sales Trends – Uncovered monthly profit patterns and discount impacts
 
-### Dashboards
-![Supplychain - Overview](https://github.com/user-attachments/assets/d95c0cd4-a4dd-4bc0-8aab-cb91b3001636)
-![Supplychain - Product](https://github.com/user-attachments/assets/74883b7f-fdb9-464d-98d0-5267037cf21c)
-![Supplychain - Supplier](https://github.com/user-attachments/assets/86e30688-6867-4b9c-bd0f-7af7a1438da0)
-
-
 ### Data Analysis
 
 Include some interesting code/feature worked with
@@ -132,6 +126,12 @@ SELECT
 FROM Supply_Chain
 GROUP BY Supplier_Name;
 ```
+
+### Dashboards
+![Supplychain - Overview](https://github.com/user-attachments/assets/d95c0cd4-a4dd-4bc0-8aab-cb91b3001636)
+![Supplychain - Product](https://github.com/user-attachments/assets/74883b7f-fdb9-464d-98d0-5267037cf21c)
+![Supplychain - Supplier](https://github.com/user-attachments/assets/c7a7237e-e20a-4144-8eea-a85078a229ae)
+
 
 ### Results/Findings
 
