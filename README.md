@@ -1,17 +1,15 @@
 # 📦 Supply Chain Analysis – Beauty & Personal Care
 
-### 📑 Table of Contents
-- [📘 Project Overview](#project-overview)  
-- [📊 Data Sources](#data-sources)  
-- [🧰 Tools Used](#tools-used)  
-- [🧹 Data Cleaning & Preparation](#data-cleaning--preparation)  
-- [🔎 Exploratory Data Analysis](#exploratory-data-analysis)  
-- [💻 SQL Queries & Data Analysis](#sql-queries--data-analysis)  
-- [📈 Dashboards](#dashboards)  
-- [🧠 Results & Insights](#results--insights)  
-- [✅ Recommendations](#recommendations)  
-- [💼 Project Files](#project-files)  
-- [🔗 Let’s Connect!](#lets-connect)
+## 📑 Table of Contents
+- [📘 Project Overview](#-project-overview)  
+- [📊 Data Sources](#-data-sources)  
+- [🧰 Tools Used](#-tools-used)  
+- [🧹 Data Cleaning and Preparation](#-data-cleaning-and-preparation)  
+- [🔎 Exploratory Data Analysis](#-exploratory-data-analysis)  
+- [💻 SQL Queries and Data Analysis](#-sql-queries-and-data-analysis)  
+- [📈 Dashboards](#-dashboards)  
+- [🧠 Results and Insights](#-results-and-insights)  
+- [📌 Recommendations](#-recommendations)  
 
 ---
 
@@ -40,7 +38,7 @@ The primary dataset used for this analysis is supply_chain_data.csv, which conta
 
 ---
 
-### 🧹 Data Cleaning & Preparation
+### 🧹 Data Cleaning and Preparation
 
 Key steps in the cleaning process:
 
@@ -65,7 +63,7 @@ Insights generated:
 Include some interesting code/feature worked with
 
 
-### 💻 SQL Queries & Data Analysis
+### 💻 SQL Queries and Data Analysis
 
 Some highlight queries used in the analysis:
 
@@ -187,7 +185,7 @@ GROUP BY Supplier_Name;
 
 ---
 
-### 📈 Dashboards (Power BI)
+### 📈 Dashboards
 
 * **📦 Supply Chain Overview**
 
@@ -203,7 +201,7 @@ GROUP BY Supplier_Name;
 
 ---
 
-### 🧠 Results & Insights
+### 🧠 Results and Insights
 
 * ✅ High overall **profit margin** observed with strong revenue.
 * 💄 **Cosmetics** had the **highest defect rates**.
