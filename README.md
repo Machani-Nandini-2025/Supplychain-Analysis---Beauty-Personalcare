@@ -1,41 +1,75 @@
-# Supply chain Analysis - Beauty & Personalcare
+# 📦 Supply Chain Analysis – Beauty & Personal Care
 
-## Table of Contents
+### 📑 Table of Contents
+- [📘 Project Overview](#project-overview)  
+- [📊 Data Sources](#data-sources)  
+- [🧰 Tools Used](#tools-used)  
+- [🧹 Data Cleaning & Preparation](#data-cleaning--preparation)  
+- [🔎 Exploratory Data Analysis](#exploratory-data-analysis)  
+- [💻 SQL Queries & Data Analysis](#sql-queries--data-analysis)  
+- [📈 Dashboards](#dashboards)  
+- [🧠 Results & Insights](#results--insights)  
+- [✅ Recommendations](#recommendations)  
+- [💼 Project Files](#project-files)  
+- [🔗 Let’s Connect!](#lets-connect)
 
-- [Project Overview](#project-overview)
-- [Data sources](#data-sources)
-- [Dashboard](#data-sources)
-- [Recomendations](#recomendations)
-### Project Overview
+---
+
+### 📘 Project Overview
 
 This project analyzes supply chain performance in the Beauty & Personal Care industry using real-world operational data. The project focused on optimizing supplier performance, reducing lead times, and improving inventory visibility.
 
-### Data sources
+The objective is to:
+
+* Evaluate **supplier performance**
+* Identify **inventory gaps**
+* Reduce **lead times**
+* Improve **inventory visibility**
+
+---
+
+### 📊 Data Sources
 
 The primary dataset used for this analysis is supply_chain_data.csv, which contains detailed information about inventory, orders, suppliers, and logistics within the Beauty & Personal Care industry.
 
-### Tools
+### 🧰 Tools Used
 
-- Excel    - Data Cleaning
-- My SQL   - Data Analysis
-- Power BI - Creating reports
+* **Excel** – Data cleaning and initial inspection
+* **MySQL** – Querying and data analysis
+* **Power BI** – Dashboard development and visualization
 
-### Data Cleaning/Preparation
+---
 
-In the intial data preparation phase, i performed the following tasks:
-1. Data loading and inspection.
-2. Handling missing values.
-3. Data cleaning and formatting.
+### 🧹 Data Cleaning & Preparation
 
-### Exploratory Data Analysis
+Key steps in the cleaning process:
 
-- Top Products & Inventory Gaps – Analyzed bestsellers and stock issues
-- Supplier Performance – Tracked delivery delays and fulfillment rates
-- Sales Trends – Uncovered monthly profit patterns and discount impacts
+* Loaded and inspected data
+* Handled missing/null values
+* Corrected data types and formatting issues
+
+---
+
+### 🔎 Exploratory Data Analysis
+
+Insights generated:
+
+* **Top Products & Inventory Gaps** – Identified bestsellers and low-stock items
+* **Supplier Performance** – Analyzed delivery delays and fulfillment rates
+* **Sales Trends** – Tracked monthly profit trends and discount impacts
+
+---
 
 ### Data Analysis
 
 Include some interesting code/feature worked with
+
+
+### 💻 SQL Queries & Data Analysis
+
+Some highlight queries used in the analysis:
+
+### 🔹 Top 5 Revenue-Generating Suppliers
 
 ```sql
 SELECT *
@@ -49,6 +83,9 @@ FROM (
 ) AS ranked_suppliers
 WHERE Supplier_Rank <= 5;
 ```
+
+### 🔹 Overall Revenue, Cost, Inventory Metrics
+
 ```sql
 SELECT 
     ROUND(SUM(Price * quantities), 2) AS Total_Revenue,
@@ -58,6 +95,9 @@ SELECT
     SUM(Stocklevels) AS Stock_Level
 FROM Supply_Chain;
 ```
+
+### 🔹 Revenue by Customer Demographics
+
 ```sql
 SELECT 
     Customer_demographics,
@@ -65,6 +105,9 @@ SELECT
 FROM Supply_Chain
 GROUP BY Customer_demographics;
 ```
+
+### 🔹 Avg. Defect Rate by Product Type
+
 ```sql
 SELECT 
     Product_Type,
@@ -72,6 +115,8 @@ SELECT
 FROM Supply_Chain
 GROUP BY Product_Type;
 ```
+
+### 🔹 Average Profit Margin by Product Type
 ```sql
 SELECT 
     Product_Type,
@@ -79,16 +124,21 @@ SELECT
 FROM Supply_Chain
 GROUP BY Product_Type;
 ```
+
+### 🔹 Product Sales Summary
 ```sql
 SELECT 
     SKU,
     Product_Type,
-    round(sum(Price),2) AS Total_Price,
+    ROUND(SUM(Price), 2) AS Total_Price,
     SUM(Quantities) AS Total_Products_Sold
 FROM Supply_Chain
 GROUP BY SKU, Product_Type;
 ```
+
+### 🔹 Lead Time by SKU
 ```sql
+
 SELECT 
     SKU,
     SUM(Lead_Time) AS Total_Lead_Time,
@@ -96,6 +146,8 @@ SELECT
 FROM Supply_Chain
 GROUP BY SKU;
 ```
+
+### 🔹 Supplier Profitability & Quality
 ```sql
 SELECT 
     Supplier_Name,
@@ -104,6 +156,8 @@ SELECT
 FROM Supply_Chain
 GROUP BY Supplier_Name;
 ```
+
+### 🔹 Transportation Mode Cost Breakdown
 ```sql
 SELECT 
     Transportation_modes,
@@ -111,6 +165,8 @@ SELECT
 FROM Supply_Chain
 GROUP BY Transportation_modes;
 ```
+
+### 🔹 Transportation Mode vs. Defect Rate
 ```sql
 SELECT 
     Transportation_Modes,
@@ -118,32 +174,59 @@ SELECT
 FROM Supply_Chain
 GROUP BY Transportation_Modes;
 ```
+
+### 🔹 Supplier Manufacturing vs. Shipping Costs
 ```sql
 SELECT 
     Supplier_Name,
-    round(SUM(Manufacturing_Costs),2) AS Total_Manufacturing_Cost,
-    round(SUM(Shipping_Costs),2) AS Total_Shipping_Cost
+    ROUND(SUM(Manufacturing_Costs), 2) AS Total_Manufacturing_Cost,
+    ROUND(SUM(Shipping_Costs), 2) AS Total_Shipping_Cost
 FROM Supply_Chain
 GROUP BY Supplier_Name;
 ```
 
-### Dashboards
+---
+
+### 📈 Dashboards (Power BI)
+
+* **📦 Supply Chain Overview**
+
 ![Supplychain - Overview](https://github.com/user-attachments/assets/d95c0cd4-a4dd-4bc0-8aab-cb91b3001636)
+
+* **🧴 Product Performance**
+
 ![Supplychain - Product](https://github.com/user-attachments/assets/74883b7f-fdb9-464d-98d0-5267037cf21c)
+
+* **🚚 Supplier & Logistics Analysis**
+
 ![Supplychain - Supplier](https://github.com/user-attachments/assets/c7a7237e-e20a-4144-8eea-a85078a229ae)
 
+---
 
-### Results/Findings
+### 🧠 Results & Insights
 
-- High overall profit margin with strong revenue generation.
-- Cosmetics have the highest defect rates among all product types.
-- Air transport is costly and has the highest defect rate, suggesting inefficiencies.
+* ✅ High overall **profit margin** observed with strong revenue.
+* 💄 **Cosmetics** had the **highest defect rates**.
+* ✈️ **Air transport** showed the **highest costs and defect rates**.
+* 🔢 Some SKUs were significantly **overstocked**, while others were understocked.
 
-### Recomendations
+---
 
-Based on the analysis we recommend the following action:
-- Reduce reliance on air transport to lower cost and defect rates.
-- Implement stricter quality control for cosmetics and haircare product.
-- Optimize inventory by reducing overstocked low performing SKUs and boosting high demand items.
+### 📌 Recommendations
+
+1. **Reduce Air Transport**
+   → To cut costs and minimize damage rates
+
+2. **Stricter Quality Control**
+   → Especially for **cosmetics** and **haircare** products
+
+3. **Inventory Optimization**
+   → Eliminate low-performing overstocked SKUs
+   → Prioritize replenishment of fast-moving items
+
+---
+
+
+
 
 
